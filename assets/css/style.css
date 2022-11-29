@@ -10,7 +10,6 @@
 }
 
 :root {
-    --main-background: #a3a29e;
     --main-red: #EE2E5D; 
     --main-font: 'Poppins', sans-serif;
 }
@@ -20,17 +19,55 @@
     width: 1000px;
 }
 
+span {
+    font-weight: 700;
+    color: var(--main-red);
+}
+
 header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     height: 5rem;
-    background: var(--main-background);
+    background: #f3eded;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 header img {
     width: 10rem;
     cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f3eded;
+    min-width: 10rem;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+.dropdown-content a {
+    color: black;
+    padding: .75rem 1rem;
+    text-decoration: none;
+    display: block;
+    transition: all ease-in-out .3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #EE2E5D;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .menu-nav ul {
@@ -39,7 +76,7 @@ header img {
 }
 
 .menu-nav a {
-    color: #fff;
+    color: #151515;
     font-weight: bold;
     font-size: 1.2rem;
     transition: all ease-in-out .3s;
@@ -58,8 +95,8 @@ header img {
 }
 
 .banner {
-    height: 80vh;
-    background: linear-gradient(67deg, #535251, #78736e);
+    height: 70vh;
+    background: var(--main-red);
     color: #ffffff;
 }
 
@@ -75,6 +112,7 @@ header img {
 
 .banner p {
     font-weight: 300;
+    font-size: 1.20rem;
     margin: 1.5rem 0;
 }
 
@@ -84,12 +122,16 @@ header img {
     border: none;
     border-radius: 30px;
     background: #363333;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
 }
 
+.highlights {
+    margin: 10rem 0;
+}
 
 .first-highlight, .second-highlight {
     margin: 5rem 0 2.5rem 0;
@@ -99,17 +141,40 @@ header img {
     gap: 5rem;
 }
 
-.highlight-img img {
+.first-img-box {
+    background-image: url("../img/investfuturo.png");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    padding: 1.5rem;
+    height: 35rem;
+    width: 30rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 5px;
-    width: 25rem;
-    height: 25rem;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.second-img-box {
+    background-image: url("../img/tec1.jpg");
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    padding: 1.5rem;
+    height: 35rem;
+    width: 30rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
 }
 
 .highlight-texts {
     max-width: 500px;
     text-align: justify;
+}
+
+.highlight-texts h2 {
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.8);
 }
 
 .highlight-texts h2, p {
@@ -122,8 +187,76 @@ header img {
     border: none;
     border-radius: 30px;
     background: var(--main-red);
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+.border-div {   
+    display: block;
+    border: 1px solid var(--main-red);
+    margin: 0 0 1.5rem 0;
+}
+
+.invest {
+    background: var(--main-red);
+    height: 15rem;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.invest-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24rem;
+}
+
+.invest-about h2 {
+    font-size: 3rem;
+}
+
+.invest-about p {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.invest-button button {
+    padding: 1rem;
+    width: 6.5rem;
+    border: none;
+    border-radius: 30px;
+    background: #151515;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: all ease-in-out .3s;
+}
+
+.footer-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9rem;
+    background: #ddd9d9;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-list h3 {
+    font-size: 1.65rem;
+    margin: 4rem 0 2rem 0;
+}
+
+.footer-list li {
+    margin-bottom: 2rem;
+}
+
+.footer-list ul {
+    cursor: pointer;
+    margin-bottom: .30rem;
 }

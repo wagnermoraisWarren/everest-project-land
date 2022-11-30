@@ -14,6 +14,16 @@
     --main-font: 'Poppins', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+/* Inicio da classe para o efeito de scroll reveal js */
+.reveal {
+    visibility: hidden;
+}
+/* Fim da classe */
+
 .wrapper {
     margin: 0 auto;
     width: 1000px;
@@ -28,8 +38,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    height: 5rem;
-    background: #f3eded;
+    min-height: 5rem;
+    background: #f8f7f7;
     color: rgba(0, 0, 0, 0.8);
 }
 
@@ -53,7 +63,7 @@ header img {
   }
 
 .dropdown-content a {
-    color: black;
+    color: rgba(0, 0, 0, 0.8);
     padding: .75rem 1rem;
     text-decoration: none;
     display: block;
@@ -70,16 +80,21 @@ header img {
   display: block;
 }
 
-.menu-nav ul {
+.nav-list ul {
     display: flex;
     gap: 2.5rem;
 }
 
-.menu-nav a {
-    color: #151515;
+.nav-list a {
+    color: rgba(0, 0, 0, 0.8);
     font-weight: bold;
     font-size: 1.2rem;
-    transition: all ease-in-out .3s;
+    transition: all ease-in-out 200ms;
+}
+
+.nav-list a:hover {
+    font-size: 1.35rem;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
 .menu-button button {
@@ -88,10 +103,17 @@ header img {
     border: none;
     border-radius: 10px;
     background: #151515;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
-    transition: all ease-in-out .3s;
+    transition: all ease-in-out .2s;
+}
+
+.menu-button button:hover {
+    background: var(--main-red);
+    color: #fff;
+    font-weight: 700;
 }
 
 .banner {
@@ -127,6 +149,13 @@ header img {
     cursor: pointer;
     text-transform: uppercase;
     font-weight: 700;
+    transition: all ease-in-out .3s;
+}
+
+.banner-button button:hover {
+    background: #fff;
+    color: var(--main-red);
+    font-weight: 700;    
 }
 
 .highlights {
@@ -152,6 +181,7 @@ header img {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 5px;
+    transition: all ease-in-out 300ms;
 }
 
 .second-img-box {
@@ -165,6 +195,13 @@ header img {
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 5px;
+    transition: all ease-in-out 300ms;
+}
+
+.first-img-box:hover, .second-img-box:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+    height: 40rem;
+    width: 35rem;
 }
 
 .highlight-texts {
@@ -191,6 +228,13 @@ header img {
     color: #fff;
     cursor: pointer;
     text-transform: uppercase;
+    font-weight: 700;
+    transition: all ease-in-out .3s;
+}
+
+.highlight-texts button:hover {
+    background: #151515;
+    color: #fff;
     font-weight: 700;
 }
 
@@ -238,6 +282,12 @@ header img {
     transition: all ease-in-out .3s;
 }
 
+.invest-button button:hover {
+    background: #fff;
+    color: var(--main-red);
+    font-weight: 700;
+}
+
 .footer-list {
     display: flex;
     align-items: center;
@@ -252,11 +302,41 @@ header img {
     margin: 4rem 0 2rem 0;
 }
 
-.footer-list li {
+.footer-list ul {
     margin-bottom: 2rem;
 }
 
-.footer-list ul {
+.footer-list li {
     cursor: pointer;
     margin-bottom: .30rem;
+    transition: all ease-in-out 100ms;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-list li:hover {
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 450px) {
+
+    header {
+        display: flex;
+        height: 15vh;
+        background: green;
+    }
+
+    header img {
+        display: none;
+    }
+
+    .banner {
+        padding: 1rem;
+        margin: 0 auto;
+        max-height: 35rem;
+        text-align: center;
+    }
+
+    .banner h1 {
+        font-size: 3.3rem;
+    }
 }

@@ -117,7 +117,7 @@ header img {
 }
 
 .banner {
-    height: 70vh;
+    height: 85vh;
     background: var(--main-red);
     color: #ffffff;
 }
@@ -200,8 +200,8 @@ header img {
 
 .first-img-box:hover, .second-img-box:hover {
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
-    height: 40rem;
-    width: 35rem;
+    height: 38rem;
+    width: 33rem;
 }
 
 .highlight-texts {
@@ -319,24 +319,66 @@ header img {
 
 @media only screen and (max-width: 450px) {
 
+    body {
+        background: dodgerblue;
+    }
+
+    .wrapper {
+        display: block;
+        width: 100%;
+    }
+
     header {
         display: flex;
         height: 15vh;
-        background: green;
+        background: #f8f7f7;
+        margin-right: 5rem;
     }
 
-    header img {
+    header button, nav {
         display: none;
     }
 
     .banner {
-        padding: 1rem;
-        margin: 0 auto;
-        max-height: 35rem;
+        padding: 0 6rem;
+        margin-right: 5rem;
+        max-height: 100vh;
         text-align: center;
+        max-width: 650px;
     }
 
     .banner h1 {
-        font-size: 3.3rem;
+        font-size: 2.3rem;
+    }
+
+    .highlights {
+        margin-right: 5rem;
+    }
+
+    .first-highlight, .second-highlight {
+        display: block;
+    }
+
+    .first-img-box, .second-img-box {
+        width: 20rem;
+        margin: 0 auto;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    .highlight-texts {
+        text-align: center;
+        max-width: 400px;
+        margin-top: 1.8rem;
+    }
+
+    .highlight-texts p {
+        text-align: justify;
+        margin: .50rem 1.5rem 2rem .50rem
+    }
+
+    .highlight-texts button {
+        margin-bottom: 3rem;
     }
 }

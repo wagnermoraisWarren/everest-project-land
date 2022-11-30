@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script> 
     <title>Document</title>
 </head>
 <body>
@@ -13,28 +15,34 @@
             <img src="https://warren.com.br/_nuxt/img/warren-logo-investimentos.462794d.svg" alt="Logo Warren">
         </div>
         <div class="navigation">
-            <nav class="menu-nav">
+            <nav class="nav-list">
                 <ul>
-                    <li><a href="#">Menu1</a></li>
+                    <li><a href="#">Quanto Custa</a></li>
                     <div class="dropdown">
                         <li>
-                            <a href="#" class="dropbtn">Menu2</a>
+                            <a href="#" class="dropbtn">Investir</a>
                             <div class="dropdown-content">
-                                <a href="#">Submenu1</a>
+                                <a href="#">Carteiras</a>
                             </div>
                         </li>
                     </div>
-                    <li><a href="#">Menu3</a></li>
-                    <li><a href="#">Menu4</a></li>
-                    <li><a href="#">Menu5</a></li>
+                    <li><a href="#">Aprender</a></li>
+                    <li><a href="#">Magazine</a></li>
+                    <li><a href="#">Sobre</a></li>
                 </ul>
             </nav>
         </div>
         <div class="menu-button">
             <button>Button</button>
         </div>
+
+        <!-- INICIO DO MENU HAMBURGUER -->
+        <i id="burguer" class="material-icons">menu</i>
+        <!-- FIM DO MENU HAMBURGUER -->
     </header>
-    <main class="banner">
+
+    <!-- INICIO DA MAIN -->
+    <main class="banner reveal">
         <div class="wrapper">
             <div class="main-div-banner">
                 <h1>Investir toma tempo, mas não precisa ser o seu!</h1>
@@ -45,7 +53,10 @@
             </div>
         </div>
     </main>
-    <section class="highlights">
+    <!-- FIM DA MAIN -->
+
+    <!-- INICIO DA PRIMEIRA SEÇÃO -->
+    <section class="highlights reveal">
         <div class="first-highlight">
             <div class="first-img-box">
                 <!-- DIV CRIADA PARA INSERIR COM BACKGROUND-IMAGE NO CSS -->
@@ -62,7 +73,7 @@
             </div>
         </div>
 
-        <div class="second-highlight">
+        <div class="second-highlight reveal">
             <div class="highlight-texts">
                 <h2>Vivemos Tecnologia</h2>
                 <p>
@@ -81,6 +92,9 @@
             </div>
         </div>
     </section>
+    <!-- FIM DA PRIMEIRA SEÇÃO -->
+
+    <!-- INICIO DA SEGUNDA SEÇÃO -->
     <section class="invest">
         <div class="invest-box">
             <div class="invest-about">
@@ -92,54 +106,58 @@
             </div>
         </div>
     </section>
+    <!-- FIM DA PRIMEIRA SEÇÃO -->
+
+    <!-- INICIO DO RODAPÉ -->
     <footer>
         <div class="footer-list">
             <div class="list-box">
                 <h3>Sobre</h3>
-                <li>
-                    <ul>Sobre a Warren</ul>
-                    <ul>Quanto custa</ul>
-                    <ul>Warren Magazine</ul>
-                    <ul>Warren Shop</ul>
-                    <ul>Programa de Indicações</ul>
-                    <ul>Trabalhe Conosco</ul>
-                </li>
+                <ul>
+                    <li>Sobre a Warren</li>
+                    <li>Quanto custa</li>
+                    <li>Warren Magazine</li>
+                    <li>Warren Shop</li>
+                    <li>Programa de Indicações</li>
+                    <li>Trabalhe Conosco</li>
+                </ul>
             </div>
             <div class="list-box">
                 <h3>Investir</h3>
-                <li>
-                    <ul>Abra sua Conta</ul>
-                    <ul>Planejamento de Vida</ul>
-                    <ul>Produtos de Investimento</ul>
-                    <ul>Carteira</ul>
-                    <ul>Bolsa</ul>
-                    <ul>Warren Pro</ul>
-                </li>
+                <ul>
+                    <li>Abra sua Conta</li>
+                    <li>Planejamento de Vida</li>
+                    <li>Produtos de Investimento</li>
+                    <li>Carteira</li>
+                    <li>Bolsa</li>
+                    <li>Warren Pro</li>
+                </ul>
             </div>
             <div class="list-box">
                 <h3>Aprender</h3>
-                <li>
-                    <ul>Warren Edu</ul>
-                    <ul>Perfil de Investidor</ul>
-                    <ul>Warren Desenrola</ul>
-                    <ul>Passo a Passo</ul>
-                    <ul>Aulas</ul>
-                    <ul>Jornada</ul>
-                </li>
+                <ul>
+                    <li>Warren Edu</li>
+                    <li>Perfil de Investidor</li>
+                    <li>Warren Desenrola</li>
+                    <li>Passo a Passo</li>
+                    <li>Alias</li>
+                    <li>Jornada</li>
+                </ul>
             </div>
             <div class="list-box">
                 <h3>Fale Conosco</h3>
-                <li>
-                    <ul>Dúvidas</ul>
-                    <ul>Ajuda</ul>
-                    <ul>Acesse o chat</ul>
-                    <ul>Acesse o WhatsApp</ul>
-                    <ul>Ouvidoria</ul>
-                    <ul>Transparência</ul>
-                </li>
+                <ul>
+                    <li>Dúvidas</li>
+                    <li>Ajuda</li>
+                    <li>Acesse o chat</li>
+                    <li>Acesse o WhatsApp</li>
+                    <li>Ouvidoria</li>
+                    <li>Transparência</li>
+                </ul>
             </div>
         </div>
     </footer>
+    <!-- FIM DO RODAPÉ -->
     <script src="assets/js/script.js"></script>
 </body>
 </html>

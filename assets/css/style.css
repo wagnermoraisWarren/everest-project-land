@@ -14,8 +14,9 @@
     --main-font: 'Poppins', sans-serif;
 }
 
-html {
+body, html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Inicio da classe para o efeito de scroll reveal js */
@@ -24,10 +25,18 @@ html {
 }
 /* Fim da classe */
 
-.wrapper {
-    margin: 0 auto;
-    width: 1000px;
+
+/* MENU MOBILE HAMBURGUER */
+.mobile-menu-icon {
+    display: none;
 }
+
+.mobile-menu {
+    display: none;
+}
+
+/* FIM DO MENU MOBILE */
+
 
 span {
     font-weight: 700;
@@ -38,7 +47,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    min-height: 5rem;
+    padding: 2rem 0;
     background: #f8f7f7;
     color: rgba(0, 0, 0, 0.8);
 }
@@ -100,6 +109,7 @@ header img {
 .menu-button button {
     padding: .50rem 1rem;
     width: 6.5rem;
+    margin: 2rem 0;
     border: none;
     border-radius: 10px;
     background: #151515;
@@ -117,14 +127,12 @@ header img {
 }
 
 .banner {
-    height: 85vh;
-    background: var(--main-red);
-    color: #ffffff;
-}
-
-.banner {
     display: flex;
     align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: var(--main-red);
+    color: #ffffff;
 }
 
 .banner h1 {
@@ -159,7 +167,7 @@ header img {
 }
 
 .highlights {
-    margin: 10rem 0;
+    margin: 5rem 0;
 }
 
 .first-highlight, .second-highlight {
@@ -246,7 +254,7 @@ header img {
 
 .invest {
     background: var(--main-red);
-    height: 15rem;
+    padding: 4rem 0;
     display: flex;
     justify-content: center;
     color: #fff;
@@ -319,30 +327,66 @@ header img {
 
 @media only screen and (max-width: 450px) {
 
-    body {
-        background: dodgerblue;
-    }
-
-    .wrapper {
-        display: block;
-        width: 100%;
-    }
-
     header {
         display: flex;
-        height: 15vh;
-        background: #f8f7f7;
-        margin-right: 5rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        background: #dbc3c3;
     }
 
-    header button, nav {
+    .logo img {
+        width: 15rem;
+    }
+
+    .menu-button, .nav-list {
         display: none;
     }
 
+    .mobile-menu-icon {
+        display: block;
+        border: none;
+    }
+
+    .mobile-menu-icon button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        margin: 2rem 0;
+    }
+
+    .mobile-menu-icon img {
+        width: 3.5rem;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-list {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .menu-button {
+        display: block;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
+
     .banner {
-        padding: 0 6rem;
-        margin-right: 5rem;
-        max-height: 100vh;
+        padding: 2rem 4rem;
         text-align: center;
         max-width: 650px;
     }
@@ -352,7 +396,23 @@ header img {
     }
 
     .highlights {
-        margin-right: 5rem;
+        padding: 2rem 1rem;
+    }
+
+    .highlight-texts {
+        margin: 1.3rem 0;
+    }
+
+    .highlight-texts h2 {
+        font-size: 1.9rem;
+        text-align: center;
+    }
+
+    .highlights-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
     }
 
     .first-highlight, .second-highlight {
@@ -360,25 +420,186 @@ header img {
     }
 
     .first-img-box, .second-img-box {
-        width: 20rem;
+        height: 17rem;
+        width: 25rem;
         margin: 0 auto;
         background-position: center;
         background-size: cover;
         object-fit: cover;
     }
 
-    .highlight-texts {
+    .invest-box, .invest-button button {
+        display: block;
+        margin: 0 auto;
+    }
+
+
+    .invest-box h2 {
         text-align: center;
-        max-width: 400px;
-        margin-top: 1.8rem;
+        font-size: 2em;
+        margin: 1rem 0;
     }
 
-    .highlight-texts p {
-        text-align: justify;
-        margin: .50rem 1.5rem 2rem .50rem
+    .invest-box p {
+        text-align: center;
+        font-size: 1.1rem;
     }
 
-    .highlight-texts button {
-        margin-bottom: 3rem;
+    .footer-list {
+        padding: 1rem 0;
+        display: block;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem 0;
+        background: #dbc3c3;
+    }
+
+    .logo img {
+        width: 18rem;
+    }
+
+    .menu-button, .nav-list {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+        border: none;
+    }
+
+    .mobile-menu-icon button {
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        margin: 2rem 0;
+    }
+
+    .mobile-menu-icon img {
+        width: 5rem;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+        font-size: 1.8rem;
+    }
+
+    .mobile-menu .nav-list {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .menu-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 2rem;
+    }
+
+    .mobile-menu button {
+        padding: .75rem 1rem;
+        width: 10rem;
+        font-size: 1.32rem;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .banner-button button {
+        padding: 1rem;
+        width: 10rem;
+        font-size: 1.3rem;
+    }
+
+    .highlights {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .highlight-texts {
+        margin: 1.3rem 0;
+        font-size: 1.5rem;
+    }
+
+    .highlight-texts h2 {
+        font-size: 1.9rem;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+    .highlights-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 2rem 0;
+    }
+
+    .highlights-button button {
+        padding: 1rem;
+        width: 10rem;
+        font-size: 1.3rem;
+    }
+
+    .first-highlight, .second-highlight {
+        display: block;
+    }
+
+    .first-img-box, .second-img-box {
+        height: 30rem;
+        width: 30rem;
+        margin: 0 auto;
+        background-position: center;
+        background-size: cover;
+        object-fit: cover;
+    }
+
+    .invest-box, .invest-button button {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .invest-box h2 {
+        text-align: center;
+        font-size: 3.4em;
+        margin: 1rem 0;
+    }
+
+    .invest-box p {
+        text-align: center;
+        font-size: 1.8rem;
+    }
+
+    .invest-button button {
+        width: 10rem;
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+
+    .footer-list {
+        padding: 1rem 0;
+        display: block;
+        text-align: center;
+    }
+
+    .list-box h3 {
+        font-size: 2.5rem;
+    }
+
+    .list-box ul {
+        font-size: 1.65rem;
     }
 }

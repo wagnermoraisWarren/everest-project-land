@@ -6,3 +6,15 @@ sr.reveal('.reveal', {
     });
 
 ScrollReveal();
+
+function showMenu() {
+    let menuMobile = document.querySelector('.mobile-menu');
+
+    if(menuMobile.classList.contains('open')) {
+        menuMobile.classList.remove('open');
+        document.querySelector('.icon').src = "assets/img/hamburguer-open.png"
+    } else {
+        menuMobile.classList.add('open');
+        document.querySelector('.icon').src = "assets/img/hamburguer-close.png"
+    }
+}

@@ -20,10 +20,21 @@ body, html {
 }
 
 /* Inicio da classe para o efeito de scroll reveal js */
+
 .reveal {
     visibility: hidden;
 }
+
 /* Fim da classe */
+
+/* Inicio classe wrapper para alinhar conteudo */
+
+.wrapper {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+/* Fim classe wrapper */
 
 
 /* MENU MOBILE HAMBURGUER */
@@ -37,14 +48,6 @@ body, html {
 }
 
 /* FIM DO MENU MOBILE */
-
-/* CLASSE WRAPPER PARA DEIXAR ALINHADO O CONTEÚDO */
-
-.wrapper {
-    margin: 0 auto;
-    width: 1350px;
-}
-/* FIM CLASSE WRAPPER */
 
 span {
     font-weight: 700;
@@ -326,6 +329,11 @@ header img {
     cursor: pointer;
     margin-bottom: .30rem;
     transition: all ease-in-out 100ms;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.footer-list a {
+    text-decoration: none;
     color: rgba(0, 0, 0, 0.8);
 }
 
